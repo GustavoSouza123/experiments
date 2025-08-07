@@ -4,6 +4,8 @@ import { AnimatePresence } from 'motion/react';
 import Wrapper from './pages/Wrapper';
 import Experiments from './pages/experiments/Experiments';
 import NotFound from './pages/NotFound';
+import TextReveal from './pages/experiments/text-reveal/TextReveal';
+import HoverEffects from './pages/experiments/hover-effects/HoverEffects';
 
 export default function App() {
   const location = useLocation();
@@ -14,10 +16,8 @@ export default function App() {
         <Route path="/" element={<Wrapper />}>
           <Route index element={<Experiments />} />
 
-          {/* <Route path="work">
-            <Route index element={<Work />} />
-            <Route path=":projectId" element={<Project />} />
-          </Route> */}
+          <Route path="text-reveal" element={<TextReveal />} />
+          <Route path="hover-effects" element={<HoverEffects />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

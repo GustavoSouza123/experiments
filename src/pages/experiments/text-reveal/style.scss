@@ -1,0 +1,21 @@
+@use '../../../css/base';
+
+.text-reveal {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    .paragraph {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: -0.04em;
+
+      span.indent {
+        display: inline-block;
+        width: 200px;
+      }
+    }
+  }
+}

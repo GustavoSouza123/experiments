@@ -1,0 +1,39 @@
+@use '../../../css/base';
+
+.hover-effects {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+    hr {
+      width: 100%;
+      border-top: 1px solid #eee;
+    }
+
+    /* hover animation */
+    .link {
+      font-size: 18px;
+      cursor: pointer;
+
+      .mask {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        pointer-events: none;
+        overflow: hidden;
+
+        span {
+          pointer-events: none;
+
+          &:nth-child(2) {
+            position: absolute;
+            top: 100%;
+          }
+        }
+      }
+    }
+  }
+}

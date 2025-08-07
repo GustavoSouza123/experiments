@@ -27,7 +27,9 @@ export default function Wrapper() {
   return (
     <>
       <ReactLenis root options={{ autoRaf: false, lerp: 0.1 }} ref={lenisRef} />
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
     </>
   );
 }
