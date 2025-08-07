@@ -16,6 +16,7 @@
     /* hover animation */
     .link {
       font-size: 18px;
+			font-weight: 500;
       cursor: pointer;
 
       .mask {
@@ -35,5 +36,20 @@
         }
       }
     }
+
+		.link2 {
+			.mask {
+				font-size: 24px;
+
+				span {
+					padding: 4px;
+				}
+			}
+		}
+
+		.link-chars {
+			font-size: 96px;
+			line-height: 0.80em;
+		}
   }
 }
