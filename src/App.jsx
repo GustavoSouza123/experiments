@@ -8,6 +8,7 @@ import TextReveal from './pages/experiments/text-reveal/TextReveal';
 import HoverEffects from './pages/experiments/hover-effects/HoverEffects';
 import CursorTrail from './pages/experiments/cursor-trail/CursorTrail';
 import CursorTrailWithBoundaries from './pages/experiments/cursor-trail-with-boundaries/CursorTrailWithBoundaries';
+import MagneticEffect from './pages/experiments/magnetic-effect/MagneticEffect';
 
 export default function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="hover-effects" element={<HoverEffects />} />
           <Route path="cursor-trail" element={<CursorTrail />} />
           <Route path="cursor-trail-with-boundaries" element={<CursorTrailWithBoundaries />} />
+          <Route path="magnetic-effect" element={<MagneticEffect />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

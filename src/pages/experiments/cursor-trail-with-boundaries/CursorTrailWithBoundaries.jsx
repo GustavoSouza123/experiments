@@ -31,12 +31,6 @@ export default function CursorTrailWithBoundaries() {
     cursorWidth = cursor.offsetWidth;
     cursorHeight = cursor.offsetHeight;
 
-    gsap.set('.cursor', { width: cursorWidth, height: cursorHeight });
-    // gsap.set('.cursor', {
-    //   top: `calc(50% - ${cursorWidth / 2}px)`,
-    //   left: `calc(50% - ${cursorHeight / 2}px)`,
-    // });
-
     xTo = gsap.quickTo('.cursor', 'x', { duration, ease });
     yTo = gsap.quickTo('.cursor', 'y', { duration, ease });
 
@@ -48,18 +42,13 @@ export default function CursorTrailWithBoundaries() {
     yTo(e.clientY - cursorHeight / 2);
   };
 
-  // const handleMouseEnter = (e) => {
-  //   xTo(contentWidth / 2);
-  //   yTo(contentHeight / 2);
-  // };
-
   const handleMouseLeave = () => {
     setTrailPosition();
   };
 
   const setTrailPosition = () => {
     xTo(contentX + contentWidth / 2 - cursorWidth / 2);
-    yTo(contentY + contentHeight / 2 - cursorHeight / 2)	;
+    yTo(contentY + contentHeight / 2 - cursorHeight / 2);
   };
 
   return (
@@ -69,7 +58,6 @@ export default function CursorTrailWithBoundaries() {
       <div
         className="content"
         onMouseMove={(e) => handleMouseMove(e)}
-        // onMouseEnter={(e) => handleMouseEnter(e)}
         onMouseLeave={() => handleMouseLeave()}
       >
         <div className="cursor">(Some info)</div>

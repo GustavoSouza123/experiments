@@ -28,6 +28,12 @@
         &:hover {
           color: #00f;
         }
+
+				&.inactive {
+					opacity: .3;
+					text-decoration: none;
+					pointer-events: none;
+				}
       }
     }
   }
