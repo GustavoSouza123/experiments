@@ -6,6 +6,8 @@ import Experiments from './pages/experiments/Experiments';
 import NotFound from './pages/NotFound';
 import TextReveal from './pages/experiments/text-reveal/TextReveal';
 import HoverEffects from './pages/experiments/hover-effects/HoverEffects';
+import CursorTrail from './pages/experiments/cursor-trail/CursorTrail';
+import CursorTrailWithBoundaries from './pages/experiments/cursor-trail-with-boundaries/CursorTrailWithBoundaries';
 
 export default function App() {
   const location = useLocation();
@@ -18,6 +20,8 @@ export default function App() {
 
           <Route path="text-reveal" element={<TextReveal />} />
           <Route path="hover-effects" element={<HoverEffects />} />
+          <Route path="cursor-trail" element={<CursorTrail />} />
+          <Route path="cursor-trail-with-boundaries" element={<CursorTrailWithBoundaries />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>
