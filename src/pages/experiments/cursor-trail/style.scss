@@ -6,15 +6,16 @@
 
 	img {
 		height: 700px;
+		display: none;
 	}
 
   .cursor {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #444;
+    background-color: #000;
     border-radius: 50%;
-		mix-blend-mode: difference;
-		filter: invert(1);
+		// mix-blend-mode: difference;
+		// filter: invert(1);
   }
 }

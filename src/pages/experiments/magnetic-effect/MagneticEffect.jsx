@@ -19,8 +19,6 @@ export default function CursorTrailWithBoundaries() {
 
     const handleMouseMove = (e) => {
       const { height, width, left, top } = cursor.getBoundingClientRect();
-      console.log(height, width, left, top);
-
       xTo(e.clientX - (left + width / 2));
       yTo(e.clientY - (top + height / 2));
     };
