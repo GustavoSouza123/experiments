@@ -5,12 +5,15 @@
   height: 100vh;
 
   .content {
-		background: blue;
+    // background: #ff0000;
+    // width: 60px;
+    // height: 40px;
     width: 150px;
     height: 60px;
+    position: relative;
 
     .cursor {
-      background-color: #eeeeee;
+      background-color: #eeeeeeaa;
       position: absolute;
       top: 0;
       left: 0;

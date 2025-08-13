@@ -35,19 +35,19 @@ export default function CursorTrailWithBoundaries() {
     yTo = gsap.quickTo('.cursor', 'y', { duration, ease });
 
     gsap.set('.cursor', {
-      x: contentX + contentWidth / 2 - cursorWidth / 2,
-      y: contentY + contentHeight / 2 - cursorHeight / 2,
+      x: contentWidth / 2 - cursorWidth / 2,
+      y: contentHeight / 2 - cursorHeight / 2,
     });
   });
 
   const handleMouseMove = (e) => {
-    xTo(e.clientX - cursorWidth / 2);
-    yTo(e.clientY - cursorHeight / 2);
+    xTo(e.clientX - contentX - cursorWidth / 2);
+    yTo(e.clientY - contentY - cursorHeight / 2);
   };
 
   const handleMouseLeave = () => {
-		xTo(contentX + contentWidth / 2 - cursorWidth / 2);
-    yTo(contentY + contentHeight / 2 - cursorHeight / 2);
+    xTo(contentWidth / 2 - cursorWidth / 2);
+    yTo(contentHeight / 2 - cursorHeight / 2);
   };
 
   return (
