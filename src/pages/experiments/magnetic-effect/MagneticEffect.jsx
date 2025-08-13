@@ -6,7 +6,7 @@ import './style.scss';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
-export default function CursorTrailWithBoundaries() {
+export default function MagneticEffect() {
   const cursor = useRef(null);
   const duration = 0.7;
   const ease = 'power4.out';
