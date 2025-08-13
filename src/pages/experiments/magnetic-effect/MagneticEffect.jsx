@@ -7,15 +7,6 @@ import './style.scss';
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
 export default function CursorTrailWithBoundaries() {
-  let xTo,
-    yTo,
-    contentWidth,
-    contentHeight,
-    contentX,
-    contentY,
-    cursorWidth,
-    cursorHeight;
-
   const duration = 0.7;
   const ease = 'power4.out';
 
@@ -23,42 +14,36 @@ export default function CursorTrailWithBoundaries() {
     const content = document.querySelector('.content');
     const cursor = document.querySelector('.cursor');
 
-    contentWidth = content.offsetWidth;
-    contentHeight = content.offsetHeight;
-    contentX = content.getBoundingClientRect().left;
-    contentY = content.getBoundingClientRect().top;
+    const xTo = gsap.quickTo('.cursor', 'x', { duration, ease });
+    const yTo = gsap.quickTo('.cursor', 'y', { duration, ease });
 
-    cursorWidth = cursor.offsetWidth;
-    cursorHeight = cursor.offsetHeight;
+    const handleMouseMove = (e) => {
+      const { height, width, left, top } = cursor.getBoundingClientRect();
+      console.log(height, width, left, top);
 
-    xTo = gsap.quickTo('.cursor', 'x', { duration, ease });
-    yTo = gsap.quickTo('.cursor', 'y', { duration, ease });
+      xTo(e.clientX - (left + width / 2));
+      yTo(e.clientY - (top + height / 2));
+    };
 
-    gsap.set('.cursor', {
-      x: contentWidth / 2 - cursorWidth / 2,
-      y: contentHeight / 2 - cursorHeight / 2,
-    });
+    const handleMouseLeave = () => {
+      xTo(0);
+      yTo(0);
+    };
+
+    content.addEventListener('mousemove', handleMouseMove);
+    content.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      content.removeEventListener('mousemove', handleMouseMove);
+      content.removeEventListener('mouseleave', handleMouseLeave);
+    };
   });
-
-  const handleMouseMove = (e) => {
-    xTo(e.clientX - contentX - cursorWidth / 2);
-    yTo(e.clientY - contentY - cursorHeight / 2);
-  };
-
-  const handleMouseLeave = () => {
-    xTo(contentWidth / 2 - cursorWidth / 2);
-    yTo(contentHeight / 2 - cursorHeight / 2);
-  };
 
   return (
     <div className="experiment magnetic-effect">
       <h1>Magnetic Effect</h1>
 
-      <div
-        className="content"
-        onMouseMove={(e) => handleMouseMove(e)}
-        onMouseLeave={() => handleMouseLeave()}
-      >
+      <div className="content">
         <div className="cursor">(Some info)</div>
       </div>
     </div>
