@@ -1,0 +1,11 @@
+@use '../../../css/base';
+
+.image-clip-path-reveal {
+  .content {
+		overflow: hidden;
+
+    img {
+      height: 700px;
+    }
+  }
+}

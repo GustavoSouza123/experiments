@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger, CustomEase, SplitText } from 'gsap/all';
 import './style.scss';
+import image from './image.png';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
@@ -48,7 +49,7 @@ export default function CursorTrail() {
       onMouseLeave={() => handleMouseLeave()}
     >
       <h1>Cursor Trail</h1>
-
+      <img src={image} />
       <div className="cursor"></div>
     </div>
   );

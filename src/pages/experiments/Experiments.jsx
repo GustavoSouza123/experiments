@@ -15,7 +15,8 @@ export default function Experiments() {
         </NavLink>
         <NavLink to="magnetic-effect">Magnetic effect</NavLink>
         <NavLink to="" className="inactive">Cursor tooltip</NavLink>
-        <NavLink to="" className="inactive">Image mask reveal</NavLink>
+        <NavLink to="image-clip-path-reveal">Image clip-path reveal</NavLink>
+        <NavLink to="" className="inactive">Text progress</NavLink>
       </div>
     </div>
   );
