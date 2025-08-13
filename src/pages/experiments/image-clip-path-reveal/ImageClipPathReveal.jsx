@@ -9,14 +9,19 @@ gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
 export default function ImageClipPathReveal() {
   useGSAP(() => {
-    gsap.fromTo(
+    let tl = gsap.timeline({
+      defaults: {
+        duration: 2,
+        ease: CustomEase.create('custom', '0.62,0.05,0.01,0.99'),
+      },
+    });
+
+    tl.fromTo(
       'img',
       { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', scale: 1.5 },
       {
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         scale: 1,
-        duration: 2,
-        ease: CustomEase.create('custom', '0.62,0.05,0.01,0.99'),
       },
       0.5
     );

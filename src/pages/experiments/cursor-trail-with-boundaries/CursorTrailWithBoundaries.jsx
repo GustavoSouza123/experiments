@@ -34,7 +34,10 @@ export default function CursorTrailWithBoundaries() {
     xTo = gsap.quickTo('.cursor', 'x', { duration, ease });
     yTo = gsap.quickTo('.cursor', 'y', { duration, ease });
 
-    setTrailPosition();
+    gsap.set('.cursor', {
+      x: contentX + contentWidth / 2 - cursorWidth / 2,
+      y: contentY + contentHeight / 2 - cursorHeight / 2,
+    });
   });
 
   const handleMouseMove = (e) => {
