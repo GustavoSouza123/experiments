@@ -26,6 +26,7 @@ export default function TextReveal() {
           scrollTrigger: {
             trigger: '.scroll-text-reveal',
             start: 'top top',
+            end: 'bottom bottom',
             scrub: true,
           },
         });
@@ -44,11 +45,7 @@ export default function TextReveal() {
           Nulla vitae aliquam justo. Nullam eu consequat arcu. Ut at
           sollicitudin ex, vitae malesuada ligula. Maecenas nec nisl orci. Nunc
           pharetra a mauris a molestie. Morbi fringilla nulla ac ipsum tristique
-          tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vivamus volutpat fringilla molestie. Nulla vitae aliquam justo. Nullam
-          eu consequat arcu. Ut at sollicitudin ex, vitae malesuada ligula.
-          Maecenas nec nisl orci. Nunc pharetra a mauris a molestie. Morbi
-          fringilla nulla ac ipsum tristique tempus.
+          tempus.
         </div>
       </div>
     </div>
