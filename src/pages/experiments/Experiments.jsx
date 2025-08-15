@@ -14,9 +14,13 @@ export default function Experiments() {
           Cursor trail with boundaries
         </NavLink>
         <NavLink to="magnetic-effect">Magnetic effect</NavLink>
-        <NavLink to="" className="inactive">Cursor tooltip</NavLink>
+        <NavLink to="" className="inactive">
+          Cursor tooltip
+        </NavLink>
         <NavLink to="image-clip-path-reveal">Image clip-path reveal</NavLink>
-        <NavLink to="" className="inactive">Text progress</NavLink>
+        <NavLink to="" className="inactive">
+          Text progress
+        </NavLink>
       </div>
     </div>
   );

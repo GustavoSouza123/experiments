@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger, CustomEase, SplitText } from 'gsap/all';
+import {
+  ScrollTrigger,
+  CustomEase,
+  SplitText,
+  ScrambleTextPlugin,
+} from 'gsap/all';
 import './style.scss';
 
-gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
+gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase, ScrambleTextPlugin);
 
 export default function HoverEffects() {
   useGSAP(() => {
-    // const tl = gsap.timeline({
-    //   defaults: {
-    //     ease: 'power2.out',
-    //   },
-    // });
-
     let chars = SplitText.create('.chars-mask span', {
       type: 'chars',
     });
   });
+
+  const scrambleTextRef = useRef(null);
 
   return (
     <div className="experiment hover-effects">
@@ -266,6 +267,28 @@ export default function HoverEffects() {
           <div className="mask chars-mask">
             <span>smoooooth</span>
             <span>smoooooth</span>
+          </div>
+        </div>
+
+        {/* fifth */}
+        <div
+          className="link scramble"
+          onMouseEnter={(e) => {
+            gsap.to('.link.scramble', {
+              duration: 1,
+              ease: 'power2.out',
+              scrambleText: {
+                text: scrambleTextRef.current.innerHTML,
+                // chars: 'upperCase',
+                chars: '!@#$%^&*',
+                revealDelay: 0.1,
+								speed: 1,
+              },
+            });
+          }}
+        >
+          <div className="text" ref={scrambleTextRef}>
+            SCRAMBLING
           </div>
         </div>
       </div>

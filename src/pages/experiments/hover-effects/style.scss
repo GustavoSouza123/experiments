@@ -8,13 +8,13 @@
     gap: 48px;
     width: 100%;
 
-		.group {
-			width: 100%;
-			display: flex;
-			gap: 48px;
-			justify-content: center;
-			flex-wrap: wrap;
-		}
+    .group {
+      width: 100%;
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     // hr {
     //   width: 100%;
@@ -24,7 +24,7 @@
     /* hover animation */
     .link {
       font-size: 18px;
-			font-weight: 500;
+      font-weight: 500;
       cursor: pointer;
 
       .mask {
@@ -45,19 +45,27 @@
       }
     }
 
-		.link2 {
-			.mask {
-				font-size: 24px;
+    .link2 {
+      .mask {
+        font-size: 24px;
 
-				span {
-					padding: 4px;
-				}
-			}
-		}
+        span {
+          padding: 4px;
+        }
+      }
+    }
 
-		.link-chars {
-			font-size: 96px;
-			line-height: 0.80em;
-		}
+    .link-chars {
+      font-size: 96px;
+      line-height: 0.8em;
+    }
+
+    .scramble {
+			font-size: 24px;
+			padding: 16px 0;
+
+      .text {
+      }
+    }
   }
 }
