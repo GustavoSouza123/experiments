@@ -226,47 +226,47 @@ export default function HoverEffects() {
           onMouseEnter={(e) => {
             let tl = gsap.timeline({
               defaults: {
-                duration: 0.5,
-                ease: 'power2.out',
+                duration: 1.3,
+                ease: CustomEase.create('custom', '0.19, 1, 0.22, 1'),
               },
             });
 
             tl.to(
               '.chars-mask span:first-child div',
-              { yPercent: -100, stagger: 0.03 },
+              { yPercent: -100, stagger: 0.05 },
               '0'
             );
 
             tl.to(
               '.chars-mask span:last-child div',
-              { yPercent: -100, stagger: 0.03 },
+              { yPercent: -100, stagger: 0.05 },
               '0'
             );
           }}
           onMouseLeave={(e) => {
             let tl = gsap.timeline({
               defaults: {
-                duration: 0.5,
-                ease: 'power2.out',
+                duration: 1.3,
+                ease: CustomEase.create('custom', '0.19, 1, 0.22, 1'),
               },
             });
 
             tl.to(
               '.chars-mask span:first-child div',
-              { yPercent: 0, stagger: 0.03 },
+              { yPercent: 0, stagger: 0.05 },
               '0'
             );
 
             tl.to(
               '.chars-mask span:last-child div',
-              { yPercent: 0, stagger: 0.03 },
+              { yPercent: 0, stagger: 0.05 },
               '0'
             );
           }}
         >
           <div className="mask chars-mask">
-            <span>smoooooth</span>
-            <span>smoooooth</span>
+            <span>smooth</span>
+            <span>smooth</span>
           </div>
         </div>
 
@@ -282,7 +282,7 @@ export default function HoverEffects() {
                 // chars: 'upperCase',
                 chars: '!@#$%^&*',
                 revealDelay: 0.1,
-								speed: 1,
+                speed: 1,
               },
             });
           }}
