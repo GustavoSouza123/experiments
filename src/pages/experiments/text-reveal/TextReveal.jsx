@@ -9,12 +9,12 @@ gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 export default function TextReveal() {
   useGSAP(() => {
     const tl = gsap.timeline({
-      defaults: {
-        ease: 'power2.out',
-      },
+      // defaults: {
+      //   ease: 'power2.out',
+      // },
     });
 
-    const paragraph = SplitText.create('.paragraph.p1', {
+    SplitText.create('.paragraph.p1', {
       type: 'lines',
       autoSplit: true,
       linesClass: 'line',
@@ -24,10 +24,31 @@ export default function TextReveal() {
           self.lines,
           {
             yPercent: 100,
-            duration: 1,
+						duration: 1,
             stagger: 0.1,
+						ease: 'power2.out',
           },
           '0.5'
+        );
+      },
+    });
+
+    SplitText.create('.paragraph.p2', {
+      type: 'lines, words',
+      autoSplit: true,
+      linesClass: 'line',
+      mask: 'lines',
+      onSplit: (self) => {
+        tl.from(
+          self.words,
+          {
+            // yPercent: 100,
+            duration: 2,
+            autoAlpha: 0,
+            stagger: 0.07,
+						ease: 'sine.out',
+          },
+          '>-0.9'
         );
       },
     });
@@ -36,7 +57,7 @@ export default function TextReveal() {
   return (
     <div className="experiment text-reveal">
       <h1>Text Reveal</h1>
-			
+
       <div className="content">
         <div className="paragraph p1">
           <span className="indent"></span>Lorem ipsum dolor sit amet,
@@ -44,9 +65,13 @@ export default function TextReveal() {
           Nulla vitae aliquam justo. Nullam eu consequat arcu. Ut at
           sollicitudin ex, vitae malesuada ligula. Maecenas nec nisl orci. Nunc
           pharetra a mauris a molestie. Morbi fringilla nulla ac ipsum tristique
-          tempus.
+          tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus volutpat fringilla molestie. Nulla vitae aliquam justo. Nullam
+          eu consequat arcu. Ut at sollicitudin ex, vitae malesuada ligula.
+          Maecenas nec nisl orci. Nunc pharetra a mauris a molestie. Morbi
+          fringilla nulla ac ipsum tristique tempus.
         </div>
-        <div className="paragraph p1">
+        <div className="paragraph p2">
           <span className="indent"></span>Lorem ipsum dolor sit amet,
           consectetur adipiscing elit. Vivamus volutpat fringilla molestie.
           Nulla vitae aliquam justo. Nullam eu consequat arcu. Ut at
