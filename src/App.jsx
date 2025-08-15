@@ -5,6 +5,7 @@ import Wrapper from './pages/Wrapper';
 import Experiments from './pages/experiments/Experiments';
 import NotFound from './pages/NotFound';
 import TextReveal from './pages/experiments/text-reveal/TextReveal';
+import ScrollTextReveal from './pages/experiments/scroll-text-reveal/ScrollTextReveal';
 import HoverEffects from './pages/experiments/hover-effects/HoverEffects';
 import CursorTrail from './pages/experiments/cursor-trail/CursorTrail';
 import CursorTrailWithBoundaries from './pages/experiments/cursor-trail-with-boundaries/CursorTrailWithBoundaries';
@@ -21,6 +22,7 @@ export default function App() {
           <Route index element={<Experiments />} />
 
           <Route path="text-reveal" element={<TextReveal />} />
+          <Route path="scroll-text-reveal" element={<ScrollTextReveal />} />
           <Route path="hover-effects" element={<HoverEffects />} />
           <Route path="cursor-trail" element={<CursorTrail />} />
           <Route

@@ -8,6 +8,7 @@ export default function Experiments() {
 
       <div className="links">
         <NavLink to="text-reveal">Text reveal</NavLink>
+        <NavLink to="scroll-text-reveal">Scroll text reveal</NavLink>
         <NavLink to="hover-effects">Hover effects</NavLink>
         <NavLink to="cursor-trail">Cursor trail</NavLink>
         <NavLink to="cursor-trail-with-boundaries">
