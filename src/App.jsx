@@ -11,6 +11,8 @@ import CursorTrail from './pages/experiments/cursor-trail/CursorTrail';
 import CursorTrailWithBoundaries from './pages/experiments/cursor-trail-with-boundaries/CursorTrailWithBoundaries';
 import MagneticEffect from './pages/experiments/magnetic-effect/MagneticEffect';
 import ImageClipPathReveal from './pages/experiments/image-clip-path-reveal/ImageClipPathReveal';
+import TextBlendingEffect from './pages/experiments/text-blending-effect/TextBlendingEffect';
+import ImageParallaxEffect from './pages/experiments/image-parallax-effect/ImageParallaxEffect';
 
 export default function App() {
   const location = useLocation();
@@ -31,6 +33,8 @@ export default function App() {
           />
           <Route path="magnetic-effect" element={<MagneticEffect />} />
           <Route path="image-clip-path-reveal" element={<ImageClipPathReveal />} />
+          <Route path="text-blending-effect" element={<TextBlendingEffect />} />
+          <Route path="image-parallax-effect" element={<ImageParallaxEffect />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

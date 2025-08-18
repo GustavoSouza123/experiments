@@ -19,9 +19,10 @@ export default function Experiments() {
           Cursor tooltip
         </NavLink>
         <NavLink to="image-clip-path-reveal">Image clip-path reveal</NavLink>
-        <NavLink to="" className="inactive">
-          Text progress
+        <NavLink to="text-blending-effect" className="inactive">
+          Text blending effect
         </NavLink>
+        <NavLink to="image-parallax-effect">Image parallax effect</NavLink>
       </div>
     </div>
   );

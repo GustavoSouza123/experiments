@@ -14,6 +14,24 @@ export default function TextReveal() {
       // },
     });
 
+    SplitText.create('.heading', {
+      type: 'words',
+      autoSplit: true,
+      mask: 'words',
+      onSplit: (self) => {
+        tl.from(
+          self.words,
+          {
+            yPercent: 100,
+            duration: 1.5,
+            stagger: 0.05,
+            ease: CustomEase.create('custom', '.075,.82,.165,1'),
+          },
+          '0.5'
+        );
+      },
+    });
+
     SplitText.create('.paragraph.p1', {
       type: 'lines',
       autoSplit: true,
@@ -24,11 +42,11 @@ export default function TextReveal() {
           self.lines,
           {
             yPercent: 100,
-						duration: 1,
+            duration: 1,
             stagger: 0.1,
-						ease: 'power2.out',
+            ease: 'power2.out',
           },
-          '0.5'
+          '>-0.9'
         );
       },
     });
@@ -46,7 +64,7 @@ export default function TextReveal() {
             duration: 2,
             autoAlpha: 0,
             stagger: 0.07,
-						ease: 'sine.out',
+            ease: 'sine.out',
           },
           '>-0.9'
         );
@@ -59,6 +77,9 @@ export default function TextReveal() {
       <h1>Text Reveal</h1>
 
       <div className="content">
+        <div className="heading">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
         <div className="paragraph p1">
           <span className="indent"></span>Lorem ipsum dolor sit amet,
           consectetur adipiscing elit. Vivamus volutpat fringilla molestie.

@@ -1,0 +1,17 @@
+@use '../../../css/base';
+
+.image-parallax-effect {
+  height: 300vh;
+  gap: 100vh !important;
+
+  .image {
+    height: 600px;
+    overflow: hidden;
+    clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
