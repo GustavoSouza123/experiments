@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger, CustomEase, SplitText } from 'gsap/all';
@@ -8,8 +8,8 @@ import image from './image.png';
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
 export default function CursorTrail() {
-  let xTo;
-  let yTo;
+  let xTo = useRef(null);
+  let yTo = useRef(null);
 
   const cursorWidth = 18;
   const cursorHeight = 18;
@@ -19,13 +19,13 @@ export default function CursorTrail() {
   useGSAP(() => {
     gsap.set('.cursor', { width: cursorWidth, height: cursorHeight });
 
-    xTo = gsap.quickTo('.cursor', 'x', { duration, ease });
-    yTo = gsap.quickTo('.cursor', 'y', { duration, ease });
+    xTo.current = gsap.quickTo('.cursor', 'x', { duration, ease });
+    yTo.current = gsap.quickTo('.cursor', 'y', { duration, ease });
   });
 
   const handleMouseMove = (e) => {
-    xTo(e.clientX - cursorWidth / 2);
-    yTo(e.clientY - cursorHeight / 2);
+    xTo.current(e.clientX - cursorWidth / 2);	
+    yTo.current(e.clientY - cursorHeight / 2);
   };
 
   const handleMouseEnter = () => {
