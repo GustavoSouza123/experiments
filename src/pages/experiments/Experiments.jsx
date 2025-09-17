@@ -23,6 +23,7 @@ export default function Experiments() {
           Text blending effect
         </NavLink>
         <NavLink to="image-parallax-effect">Image parallax effect</NavLink>
+        <NavLink to="webgl-slider-smooothy">WebGL Slider (smooothy)</NavLink>
       </div>
     </div>
   );

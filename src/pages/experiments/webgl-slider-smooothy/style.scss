@@ -1,0 +1,54 @@
+.carousel-container {
+  padding-top: 1rem; // py-sm
+  padding-bottom: 4rem; // pb-xl
+  display: flex;
+  width: 100vw;
+  overflow-x: hidden;
+  padding-left: calc(50% - 40vw);
+  padding-right: calc(50% - 40vw);
+  outline: none;
+
+  @media (min-width: 768px) {
+    padding-left: calc(50% - 15vw);
+    padding-right: calc(50% - 15vw);
+  }
+}
+
+.carousel-slide {
+  display: flex;
+  aspect-ratio: 3 / 4;
+  width: 80vw;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+	pointer-events: none;
+
+  @media (min-width: 768px) {
+    width: 30vw;
+  }
+}
+
+.slide-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  outline: 1px solid #1f2937; // Tailwind's gray-800
+	pointer-events: none;
+}
+
+.slide-inner {
+  height: 100%;
+  width: 100%;
+  outline: 1px solid #4b5563; // Tailwind's gray-600
+	pointer-events: none;
+}
+
+.slide-index {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+	pointer-events: none;
+}

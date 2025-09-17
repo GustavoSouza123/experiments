@@ -13,6 +13,7 @@ import MagneticEffect from './pages/experiments/magnetic-effect/MagneticEffect';
 import ImageClipPathReveal from './pages/experiments/image-clip-path-reveal/ImageClipPathReveal';
 import TextBlendingEffect from './pages/experiments/text-blending-effect/TextBlendingEffect';
 import ImageParallaxEffect from './pages/experiments/image-parallax-effect/ImageParallaxEffect';
+import WebGLSliderSmooothy from './pages/experiments/webgl-slider-smooothy/WebGLSliderSmooothy.tsx';
 
 export default function App() {
   const location = useLocation();
@@ -27,14 +28,12 @@ export default function App() {
           <Route path="scroll-text-reveal" element={<ScrollTextReveal />} />
           <Route path="hover-effects" element={<HoverEffects />} />
           <Route path="cursor-trail" element={<CursorTrail />} />
-          <Route
-            path="cursor-trail-with-boundaries"
-            element={<CursorTrailWithBoundaries />}
-          />
+          <Route path="cursor-trail-with-boundaries" element={<CursorTrailWithBoundaries />} />
           <Route path="magnetic-effect" element={<MagneticEffect />} />
           <Route path="image-clip-path-reveal" element={<ImageClipPathReveal />} />
           <Route path="text-blending-effect" element={<TextBlendingEffect />} />
           <Route path="image-parallax-effect" element={<ImageParallaxEffect />} />
+          <Route path="webgl-slider-smooothy" element={<WebGLSliderSmooothy />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>
