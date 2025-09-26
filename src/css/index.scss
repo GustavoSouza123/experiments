@@ -17,9 +17,13 @@
 
     .links {
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
+			flex-wrap: wrap;
       align-items: center;
-      gap: 16px;
+			justify-content: center;
+			width: 90%;
+			max-width: 1000px;
+      gap: 32px;
 
       a {
         color: #000;

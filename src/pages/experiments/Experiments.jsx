@@ -11,9 +11,7 @@ export default function Experiments() {
         <NavLink to="scroll-text-reveal">Scroll text reveal</NavLink>
         <NavLink to="hover-effects">Hover effects</NavLink>
         <NavLink to="cursor-trail">Cursor trail</NavLink>
-        <NavLink to="cursor-trail-with-boundaries">
-          Cursor trail with boundaries
-        </NavLink>
+        <NavLink to="cursor-trail-with-boundaries">Cursor trail with boundaries</NavLink>
         <NavLink to="magnetic-effect">Magnetic effect</NavLink>
         <NavLink to="" className="inactive">
           Cursor tooltip
@@ -24,6 +22,9 @@ export default function Experiments() {
         </NavLink>
         <NavLink to="image-parallax-effect">Image parallax effect</NavLink>
         <NavLink to="webgl-slider-smooothy">WebGL Slider (smooothy)</NavLink>
+        <NavLink to="webgl">WebGL</NavLink>
+        <NavLink to="webgl-pixel-distortion">WebGL Pixel Distortion</NavLink>
+        <NavLink to="three-js-cube">Three.js Cube</NavLink>
       </div>
     </div>
   );
