@@ -1,5 +1,6 @@
 .webgl-pixel-distortion {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -13,8 +14,8 @@
 
   #imageContainer {
     position: relative;
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -34,6 +35,21 @@
       width: 100% !important;
       height: 100% !important;
       object-fit: cover;
+    }
+  }
+
+  .info {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+
+    a {
+      color: #555;
+      transition: 0.2s;
+
+      &:hover {
+        color: #777;
+      }
     }
   }
 }

@@ -155,6 +155,10 @@ export default function WebGLPixelDistortion1() {
       <div id="imageContainer">
         <img id="myImage" src="https://assets.codepen.io/9051928/palm-tree.jpg" />
       </div>
+
+      <div className="info">
+        <a href="https://www.youtube.com/watch?v=gGvYq6baFiQ&t=62s">Tutorial from Juxtopposed</a>
+      </div>
     </div>
   );
 }
