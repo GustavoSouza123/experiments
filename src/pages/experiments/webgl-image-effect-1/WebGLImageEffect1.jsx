@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import './style.scss';
 
-export default function WebGLPixelDistortion1() {
+export default function WebGLImageEffect1() {
   // variables
   let easeFactor = 0.02;
   let scene, camera, renderer, planeMesh;
@@ -151,7 +151,7 @@ export default function WebGLPixelDistortion1() {
   }, []);
 
   return (
-    <div className="webgl-pixel-distortion-1">
+    <div className="webgl-image-effect-1">
       <div id="imageContainer">
         <img id="myImage" src="https://assets.codepen.io/9051928/palm-tree.jpg" />
       </div>

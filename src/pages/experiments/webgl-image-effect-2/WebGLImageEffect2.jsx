@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import './style.scss';
 
-export default function WebGLPixelDistortion2() {
+export default function WebGLImageEffect2() {
   // variables
   let scene, camera, renderer, planeMesh;
 
@@ -192,7 +192,7 @@ export default function WebGLPixelDistortion2() {
   }, []);
 
   return (
-    <div className="webgl-pixel-distortion-2">
+    <div className="webgl-image-effect-2">
       <div id="imageContainer">
         <img id="myImage" src="https://assets.codepen.io/9051928/retro.jpg" />
       </div>
