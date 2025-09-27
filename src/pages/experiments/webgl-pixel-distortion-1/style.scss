@@ -1,0 +1,39 @@
+.webgl-pixel-distortion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111215;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+
+  canvas {
+    display: block;
+  }
+
+  #imageContainer {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 100%;
+    filter: saturate(0);
+    transition: all ease 0.5s;
+
+    &:hover {
+      filter: saturate(100%);
+    }
+
+    & > * {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+}

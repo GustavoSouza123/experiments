@@ -23,7 +23,7 @@ export default function Experiments() {
         <NavLink to="image-parallax-effect">Image parallax effect</NavLink>
         <NavLink to="webgl-slider-smooothy">WebGL Slider (smooothy)</NavLink>
         <NavLink to="webgl">WebGL</NavLink>
-        <NavLink to="webgl-pixel-distortion">WebGL Pixel Distortion</NavLink>
+        <NavLink to="webgl-pixel-distortion-1">WebGL Pixel Distortion #1</NavLink>
         <NavLink to="three-js-cube">Three.js Cube</NavLink>
       </div>
     </div>
