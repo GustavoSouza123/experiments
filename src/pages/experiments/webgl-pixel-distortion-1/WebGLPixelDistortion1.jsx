@@ -97,7 +97,7 @@ export default function WebGLPixelDistortion1() {
       imageContainer.appendChild(renderer.domElement);
     }
 
-    // 	use the existing image from html in the canvas
+    // use the existing image from html in the canvas
     initializeScene(new THREE.TextureLoader().load(imageElement.src));
 
     // animating the scene
@@ -151,13 +151,13 @@ export default function WebGLPixelDistortion1() {
   }, []);
 
   return (
-    <div className="webgl-pixel-distortion">
+    <div className="webgl-pixel-distortion-1">
       <div id="imageContainer">
         <img id="myImage" src="https://assets.codepen.io/9051928/palm-tree.jpg" />
       </div>
 
       <div className="info">
-        <a href="https://www.youtube.com/watch?v=gGvYq6baFiQ&t=62s">Tutorial from Juxtopposed</a>
+        <a href="https://www.youtube.com/watch?v=gGvYq6baFiQ">Tutorial from Juxtopposed</a>
       </div>
     </div>
   );

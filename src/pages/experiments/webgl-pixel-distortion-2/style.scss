@@ -1,4 +1,4 @@
-.webgl-pixel-distortion-1 {
+.webgl-pixel-distortion-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,19 +8,24 @@
 
   canvas {
     display: block;
+    transition: 1s transform;
+
+    &:hover {
+      // transform: scale(1.2);
+    }
   }
 
   #imageContainer {
     position: relative;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 800px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     max-width: 100%;
-    filter: saturate(0);
+    filter: saturate(50%);
     transition: all ease 0.5s;
 
     &:hover {

@@ -17,6 +17,7 @@ import WebGLSliderSmooothy from './pages/experiments/webgl-slider-smooothy/WebGL
 import WebGL from './pages/experiments/webgl/WebGL.jsx';
 import WebGLPixelDistortion1 from './pages/experiments/webgl-pixel-distortion-1/WebGLPixelDistortion1.jsx';
 import ThreejsCube from './pages/experiments/three-js-cube/ThreejsCube.jsx';
+import WebGLPixelDistortion2 from './pages/experiments/webgl-pixel-distortion-2/WebGLPixelDistortion2.jsx';
 
 export default function App() {
   const location = useLocation();
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="webgl-slider-smooothy" element={<WebGLSliderSmooothy />} />
           <Route path="webgl" element={<WebGL />} />
           <Route path="webgl-pixel-distortion-1" element={<WebGLPixelDistortion1 />} />
+          <Route path="webgl-pixel-distortion-2" element={<WebGLPixelDistortion2 />} />
           <Route path="three-js-cube" element={<ThreejsCube />} />
 
           <Route path="*" element={<NotFound />} />

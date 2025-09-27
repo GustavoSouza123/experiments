@@ -24,6 +24,7 @@ export default function Experiments() {
         <NavLink to="webgl-slider-smooothy">WebGL Slider (smooothy)</NavLink>
         <NavLink to="webgl">WebGL</NavLink>
         <NavLink to="webgl-pixel-distortion-1">WebGL Pixel Distortion #1</NavLink>
+        <NavLink to="webgl-pixel-distortion-2">WebGL Pixel Distortion #2</NavLink>
         <NavLink to="three-js-cube">Three.js Cube</NavLink>
       </div>
     </div>
