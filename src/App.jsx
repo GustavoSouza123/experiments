@@ -18,6 +18,7 @@ import WebGL from './pages/experiments/webgl/WebGL.jsx';
 import ThreejsCube from './pages/experiments/three-js-cube/ThreejsCube.jsx';
 import WebGLImageEffect1 from './pages/experiments/webgl-image-effect-1/WebGLImageEffect1.jsx';
 import WebGLImageEffect2 from './pages/experiments/webgl-image-effect-2/WebGLImageEffect2.jsx';
+import ArchitectureStudioPortfolio from './pages/experiments/architecture-studio-portfolio/ArchitectureStudioPortfolio.jsx';
 
 export default function App() {
   const location = useLocation();
@@ -39,9 +40,10 @@ export default function App() {
           <Route path="image-parallax-effect" element={<ImageParallaxEffect />} />
           <Route path="webgl-slider-smooothy" element={<WebGLSliderSmooothy />} />
           <Route path="webgl" element={<WebGL />} />
+          <Route path="three-js-cube" element={<ThreejsCube />} />
           <Route path="webgl-image-effect-1" element={<WebGLImageEffect1 />} />
           <Route path="webgl-image-effect-2" element={<WebGLImageEffect2 />} />
-          <Route path="three-js-cube" element={<ThreejsCube />} />
+          <Route path="architecture-studio-portfolio" element={<ArchitectureStudioPortfolio />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>
