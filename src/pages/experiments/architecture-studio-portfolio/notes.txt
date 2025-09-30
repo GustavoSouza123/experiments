@@ -1,0 +1,6 @@
+CustomEase.create("ease-primary", "0.87, 0, 0.13, 1");
+CustomEase.create("ease-secondary", "0.16, 1, 0.35, 1");
+CustomEase.create("ease-tertiary", "0.53, 0.23, 0.25, 1");
+CustomEase.create("ease-menu", ".7,0,.22,1");
+CustomEase.create("ease-transition", "0.76, 0, 0.24, 1");
+CustomEase.create("ease-textloader", "0.83, 0, 0.17, 1");
