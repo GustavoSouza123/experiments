@@ -27,6 +27,7 @@ export default function Experiments() {
         <NavLink to="webgl-image-effect-1">WebGL Image Effect #1</NavLink>
         <NavLink to="webgl-image-effect-2">WebGL Image Effect #2</NavLink>
         <NavLink to="architecture-studio-portfolio">Architecture Studio Portfolio</NavLink>
+        <NavLink to="g1-experience">G1 Experience</NavLink>
       </div>
     </div>
   );
