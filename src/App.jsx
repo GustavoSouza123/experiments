@@ -20,6 +20,7 @@ import WebGLImageEffect1 from './pages/experiments/webgl-image-effect-1/WebGLIma
 import WebGLImageEffect2 from './pages/experiments/webgl-image-effect-2/WebGLImageEffect2.jsx';
 import ArchitectureStudioPortfolio from './pages/experiments/architecture-studio-portfolio/ArchitectureStudioPortfolio.jsx';
 import G1Experience from './pages/experiments/g1-experience/G1Experience.jsx';
+import ImageCursorTrail from './pages/experiments/image-cursor-trail/ImageCursorTrail.jsx';
 
 export default function App() {
   const location = useLocation();
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="webgl-image-effect-2" element={<WebGLImageEffect2 />} />
           <Route path="architecture-studio-portfolio" element={<ArchitectureStudioPortfolio />} />
           <Route path="g1-experience" element={<G1Experience />} />
+          <Route path="image-cursor-trail" element={<ImageCursorTrail />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>
