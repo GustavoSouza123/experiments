@@ -19,6 +19,7 @@ export default function HoverEffects() {
   });
 
   const scrambleTextRef = useRef(null);
+  const scrambleText2Ref = useRef(null);
 
   return (
     <div className="experiment hover-effects">
@@ -274,13 +275,13 @@ export default function HoverEffects() {
         <div
           className="link scramble"
           onMouseEnter={(e) => {
-            gsap.to('.link.scramble', {
+            gsap.to('.link.scramble .text', {
               duration: 1,
               ease: 'power2.out',
               scrambleText: {
                 text: scrambleTextRef.current.innerHTML,
-                // chars: 'upperCase',
-                chars: '!@#$%^&*',
+                chars: 'upperCase',
+                // chars: '!@#$%^&*',
                 revealDelay: 0.1,
                 speed: 1,
               },
@@ -289,6 +290,28 @@ export default function HoverEffects() {
         >
           <div className="text" ref={scrambleTextRef}>
             SCRAMBLING
+          </div>
+        </div>
+
+        {/* sixth */}
+        <div
+          className="link scramble2"
+          onMouseEnter={(e) => {
+            gsap.to('.link.scramble2 .text', {
+              duration: 1,
+              ease: 'power2.out',
+              scrambleText: {
+                text: scrambleText2Ref.current.innerHTML,
+                // chars: 'lowerCase',
+								chars: 'Az',
+                revealDelay: 0.1,
+                speed: 1,
+              },
+            });
+          }}
+        >
+          <div className="text" ref={scrambleText2Ref}>
+            letters
           </div>
         </div>
       </div>

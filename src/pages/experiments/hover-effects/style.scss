@@ -58,14 +58,15 @@
     .link-chars {
       font-size: 165px;
       line-height: 1.1em;
-			text-transform: uppercase;
-			font-weight: 600;
-			letter-spacing: -0.05em;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: -0.05em;
     }
 
-    .scramble {
-			font-size: 24px;
-			padding: 16px 0;
+    .scramble,
+    .scramble2 {
+      font-size: 24px;
+      padding: 16px 0;
 
       .text {
       }
