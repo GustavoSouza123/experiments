@@ -8,10 +8,10 @@ gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
 export default function ImageCursorTrail() {
   useEffect(() => {
-    const cleanup = initImageTrailOnPage(); // ✅ initialize when mounted
+    const cleanup = initImageTrailOnPage();
 
     return () => {
-      if (cleanup) cleanup(); // ✅ clean up listeners, intervals, etc.
+      if (cleanup) cleanup();
     };
   }, []);
 
