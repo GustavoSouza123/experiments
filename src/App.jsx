@@ -21,6 +21,7 @@ import WebGLImageEffect2 from './pages/experiments/webgl-image-effect-2/WebGLIma
 import ArchitectureStudioPortfolio from './pages/experiments/architecture-studio-portfolio/ArchitectureStudioPortfolio.jsx';
 import G1Experience from './pages/experiments/g1-experience/G1Experience.jsx';
 import ImageCursorTrail from './pages/experiments/image-cursor-trail/ImageCursorTrail.jsx';
+import DirectionalListHover from './pages/experiments/directional-list-hover/DirectionalListHover.jsx';
 
 export default function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="architecture-studio-portfolio" element={<ArchitectureStudioPortfolio />} />
           <Route path="g1-experience" element={<G1Experience />} />
           <Route path="image-cursor-trail" element={<ImageCursorTrail />} />
+          <Route path="directional-list-hover" element={<DirectionalListHover />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

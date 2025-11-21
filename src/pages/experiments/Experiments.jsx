@@ -29,6 +29,7 @@ export default function Experiments() {
         <NavLink to="architecture-studio-portfolio">Architecture Studio Portfolio</NavLink>
         <NavLink to="g1-experience">G1 Experience</NavLink>
         <NavLink to="image-cursor-trail">Image Cursor Trail</NavLink>
+        <NavLink to="directional-list-hover">Directional List Hover</NavLink>
       </div>
     </div>
   );
